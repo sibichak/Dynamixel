@@ -114,7 +114,7 @@ end
     
 % Pick and Drop Operation
 for i = 1:x
-    Traj = jtraj(Pos(i,:),Pos(i+1,:),5);
+    Traj = jtraj(Pos(i,:),Pos(i+1,:),250);
     for j = 1:6
         write2ByteTxRx(port_num, PROTOCOL_VERSION, j , ADDR_MX_GOAL_POSITION, Traj(i,j));
         pause(0.5);
